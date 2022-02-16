@@ -9,7 +9,7 @@ if %StartLoading% == Y (
 	goto StartLoading
 ) else (
 	echo [Automatically Exiting In 3s - Press Enter to skip]
-	timeount > nul /t 3
+	timeout > nul /t 3
 	exit
 )
 
