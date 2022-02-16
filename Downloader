@@ -4,5 +4,16 @@
 
 cls && @echo off && title Batch Game Download - Karim Dalati && color c && cls
 
-echo Downloading files... Please wait...
+echo Start Game Download? (Y/N)
+set /p StartDownload=
+if %StartDownload% == Y (
+	:StartDownload
+) else (
+	echo [Automatically Exiting In 3s - Press Enter to skip]
+	timeout > nul /t 3
+	exit
+)
+
+:StartDownload
+cls
 pause > nul
