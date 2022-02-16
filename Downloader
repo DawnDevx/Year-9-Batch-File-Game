@@ -26,6 +26,8 @@ echo ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
 echo ÛÛÛ 20%
 timeout > bul /t 2
 cls
+md Batch Game - Karim Dalati
+cls
 echo ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»
 echo º     Batch Game      º
 echo ÌÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹
