@@ -1,0 +1,7 @@
+::Made by K.D.
+::Run this file to download the game.
+
+cls && @echo off && title Batch Game Download - Karim Dalati && color c && cls
+
+echo Downloading files... Please wait...
+pause > nul
