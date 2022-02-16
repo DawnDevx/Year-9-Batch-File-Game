@@ -3,7 +3,15 @@
 
 cls && @echo off && color 2 && title Batch Game && cls
 
-goto StartLoading
+echo Start Loading (Y/N)
+set /p StartLoading=
+if %StartLoading% == Y (
+	goto StartLoading
+) else (
+	echo [Automatically Exiting In 3s - Press Enter to skip]
+	timeount > nul /t 3
+	exit
+)
 
 :StartLoading
 cls
@@ -15,7 +23,7 @@ echo º(c)All rights reserved. º
 echo ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
 echo Loading Data...
 echo Û±±±±±±±±±
-pause > nul
+timeout > nul /t 2
 cls
 echo ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»
 echo º       Batch Game       º
@@ -25,7 +33,7 @@ echo º(c)All rights reserved. º
 echo ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
 echo Loading Data...10%%
 echo ÛÛÛ±±±±±±±
-pause > nul
+timeout > nul /t 2
 cls
 echo ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»
 echo º       Batch Game       º
@@ -35,7 +43,7 @@ echo º(c)All rights reserved. º
 echo ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
 echo Loading Data...30%%
 echo ÛÛÛÛÛ±±±±±
-pause > nul
+timeout > nul /t 2
 cls
 echo ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»
 echo º       Batch Game       º
@@ -45,7 +53,7 @@ echo º(c)All rights reserved. º
 echo ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
 echo Loading Data...50%%
 echo ÛÛÛÛÛÛÛ±±±
-pause > nul
+timeout > nul /t 2
 cls
 echo ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»
 echo º       Batch Game       º
@@ -55,11 +63,11 @@ echo º(c)All rights reserved. º
 echo ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
 echo Loading Data...100%%
 echo ÛÛÛÛÛÛÛÛÛÛ
-pause > nul
+timeout > nul /t 2
 cls
 echo Loading Complete!...100%%
 echo ÛÛÛÛÛÛÛÛÛÛ
-pause > nul
+timeout > nul /t 2
 goto CreateCharacterName
 
 :CreateCharacterName
@@ -87,15 +95,18 @@ echo ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
 set /p CharGender=
 if %CharGender%==Male (
 	echo Your Character Gender: %CharGender%
+	echo [Press any key to continue]
 	pause > nul
 	goto SetUpBank
 ) else (
 	if %CharGender%==Female (
 		echo Your Character Gender: %CharGender%
+		echo [Press any key to continue]
 		pause > nul
 		goto SetUpBank
 	) else (
-		echo This is not a valid gender
+		echo This is not a valid gender!
+		echo [Press any key to continue]
 		pause > nul
 		goto CreateCharacterGender
 	)
@@ -110,7 +121,9 @@ echo Create your Bank Number:
 set /p CharBankNum=
 echo Your Bank Account Number: %CharBankNum%
 set /a CharCash = 0
+set CharJob=None
 echo Successfully created your Bank Account!
+echo [Press any key to continue]
 pause > nul
 goto MainMenu
 
@@ -123,32 +136,51 @@ echo Name: %CharName%
 echo Gender: %CharGender%
 echo Cash: %CharCash%
 echo Bank Account Number: %CharBankNum%
+echo Job: %CharJob%
+echo [Press any key to continue]
 pause > nul
-echo What would you like to do?
-echo Get A Job? (Use: JOB)
-echo Exit? (Use: Exit)
-echo --More Coming Soon--
+cls
+echo ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»
+echo º What would you like to do? º
+echo ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
+if %CharJob% == None (
+	echo Get A Job? [Use: JOB]
+) else (
+	echo Go to work? (%CharJob%)
+)
+echo Exit? [Use: Exit]
+echo Wipe Data? [Use: WipePlayerData]
+echo [More Coming Soon]
+
 set /p ChoicePath=
 if %ChoicePath%==JOB (
-
+	echo JobPath
+	pause > nul
 ) else (
 	if %ChoicePath%==Exit (
 		cls
-		echo Press any key to exit...
+		echo [Press any key to exit]
 		pause > nul
 		exit
 	) else (
-		echo Not a valid path
-		pause > nul
-		goto MainMenu
+		if %ChoicePath% == WipePlayerData (
+			goto StartLoading
+		) else (
+			echo Not a valid path
+			pause > nul
+			goto MainMenu
+		)
 	)
 )
 
 :GetAJob
 cls
-echo What would you like to work as?
+echo ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»
+echo º What would you like to work as? º
+echo ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
+echo [Press any key to continue]
 pause > nul
 cls
-echo more coming soon!
+echo More Content Coming Soon!
 pause > nul
 exit
