@@ -1,5 +1,6 @@
 ::Made by K.D.
 ::Run this file to download the game.
+::Save with encoding as: ANSI
 
 cls && @echo off && title Batch Game Download - Karim Dalati && color c && cls
 
