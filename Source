@@ -1,0 +1,69 @@
+::Made by K.D.
+::Save file as [NAME].bat and encoding as ANSI
+
+cls && @echo off && color 2 && title Batch Game && cls
+
+goto StartLoading
+
+:StartLoading
+cls
+echo ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»
+echo º       Batch Game       º
+echo ÌÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹
+echo º Made By: Karim Dalati  º
+echo º(c)All rights reserved. º
+echo ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
+echo Loading Data...
+echo Û±±±±±±±±±
+pause > nul
+cls
+echo ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»
+echo º       Batch Game       º
+echo ÌÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹
+echo º Made By: Karim Dalati  º
+echo º(c)All rights reserved. º
+echo ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
+echo Loading Data...10%%
+echo ÛÛÛ±±±±±±±
+pause > nul
+cls
+echo ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»
+echo º       Batch Game       º
+echo ÌÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹
+echo º Made By: Karim Dalati  º
+echo º(c)All rights reserved. º
+echo ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
+echo Loading Data...30%%
+echo ÛÛÛÛÛ±±±±±
+pause > nul
+cls
+echo ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»
+echo º       Batch Game       º
+echo ÌÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹
+echo º Made By: Karim Dalati  º
+echo º(c)All rights reserved. º
+echo ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
+echo Loading Data...50%%
+echo ÛÛÛÛÛÛÛ±±±
+pause > nul
+cls
+echo ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»
+echo º       Batch Game       º
+echo ÌÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹
+echo º Made By: Karim Dalati  º
+echo º(c)All rights reserved. º
+echo ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
+echo Loading Data...100%%
+echo ÛÛÛÛÛÛÛÛÛÛ
+pause > nul
+cls
+echo Loading Complete!...100%%
+echo ÛÛÛÛÛÛÛÛÛÛ
+pause > nul
+exit
+
+:CreateCharacter
+cls
+echo ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»
+echo Ì Enter Character Name ¹
+echo ¼ÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
