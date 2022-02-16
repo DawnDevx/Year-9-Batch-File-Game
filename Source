@@ -154,8 +154,7 @@ echo [More Coming Soon]
 
 set /p ChoicePath=
 if %ChoicePath%==JOB (
-	echo JobPath
-	pause > nul
+	goto GetAJob
 ) else (
 	if %ChoicePath%==Exit (
 		cls
