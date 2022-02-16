@@ -146,3 +146,9 @@ if %ChoicePath%==JOB (
 
 :GetAJob
 cls
+echo What would you like to work as?
+pause > nul
+cls
+echo more coming soon!
+pause > nul
+exit
