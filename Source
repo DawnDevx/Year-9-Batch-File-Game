@@ -1,62 +1,298 @@
 ::Made by K.D.
-::Run this file to download the game.
-::Save with encoding as: ANSI
+::Save file as [NAME].bat and encoding as ANSI
 
-cls && @echo off && title Batch Game Download - Karim Dalati && color c && cls
+cls && @echo off && color 2 && title Batch Game && cls
 
-echo Start Game Download? (Y/N)
-set /p StartDownload=
-if %StartDownload% == Y (
-	goto StartDownload
+echo Start Loading (Y/N)
+set /p StartLoading=
+if %StartLoading% == Y (
+	goto StartLoading
 ) else (
 	echo [Automatically Exiting In 3s - Press Enter to skip]
 	timeout > nul /t 3
 	exit
 )
 
-:StartDownload
+:StartLoading
 cls
-cd Desktop
-cls
-echo ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»
-echo º     Batch Game      º
-echo ÌÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹
-echo º Download Game Files º
-echo ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
-echo ÛÛÛ 20%
-timeout > bul /t 2
-cls
-md Batch Game - Karim Dalati
-cls
-echo ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»
-echo º     Batch Game      º
-echo ÌÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹
-echo º Download Game Files º
-echo ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
-echo ÛÛÛÛ 40%
-cd
+echo ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»
+echo º       Batch Game       º
+echo ÌÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹
+echo º Made By: Karim Dalati  º
+echo º(c)All rights reserved. º
+echo ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
+echo Loading Data...
+echo Û±±±±±±±±±
 timeout > nul /t 2
 cls
-echo ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»
-echo º     Batch Game      º
-echo ÌÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹
-echo º Download Game Files º
-echo ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
-echo ÛÛÛÛÛ 60%
+echo ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»
+echo º       Batch Game       º
+echo ÌÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹
+echo º Made By: Karim Dalati  º
+echo º(c)All rights reserved. º
+echo ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
+echo Loading Data...10%%
+echo ÛÛÛ±±±±±±±
 timeout > nul /t 2
 cls
-echo ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»
-echo º     Batch Game      º
-echo ÌÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹
-echo º Download Game Files º
-echo ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
-echo ÛÛÛÛÛÛ 80%
+echo ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»
+echo º       Batch Game       º
+echo ÌÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹
+echo º Made By: Karim Dalati  º
+echo º(c)All rights reserved. º
+echo ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
+echo Loading Data...30%%
+echo ÛÛÛÛÛ±±±±±
 timeout > nul /t 2
 cls
-echo ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»
-echo º     Batch Game      º
-echo ÌÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹
-echo º Download Game Files º
-echo ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
-echo ÛÛÛÛÛÛÛ 100%
+echo ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»
+echo º       Batch Game       º
+echo ÌÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹
+echo º Made By: Karim Dalati  º
+echo º(c)All rights reserved. º
+echo ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
+echo Loading Data...50%%
+echo ÛÛÛÛÛÛÛ±±±
+timeout > nul /t 2
+cls
+echo ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»
+echo º       Batch Game       º
+echo ÌÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹
+echo º Made By: Karim Dalati  º
+echo º(c)All rights reserved. º
+echo ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
+echo Loading Data...100%%
+echo ÛÛÛÛÛÛÛÛÛÛ
+timeout > nul /t 2
+cls
+echo Loading Complete!...100%%
+echo ÛÛÛÛÛÛÛÛÛÛ
+timeout > nul /t 2
+goto CreateCharacterName
+
+:CreateCharacterName
+cls
+echo ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»
+echo Ì Enter Character Name ¹
+echo ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
+set /p CharName=
+echo Your Character Name: %CharName%
+echo Correct? (Y/N)
+set /p CorrectName=
+if %CorrectName%==Y (
+	goto CreateCharacterGender
+) else (
+	goto CreateCharacterName
+)
+
+:CreateCharacterGender
+cls
+echo ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»
+echo º Enter Character Gender º
+echo ÌÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹
+echo º Options: Male - Female º
+echo ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
+set /p CharGender=
+if %CharGender%==Male (
+	echo Your Character Gender: %CharGender%
+	echo [Press any key to continue]
+	pause > nul
+	goto SetUpBank
+) else (
+	if %CharGender%==Female (
+		echo Your Character Gender: %CharGender%
+		echo [Press any key to continue]
+		pause > nul
+		goto SetUpBank
+	) else (
+		echo This is not a valid gender!
+		echo [Press any key to continue]
+		pause > nul
+		goto CreateCharacterGender
+	)
+)
+
+:SetUpBank
+cls
+echo ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»
+echo º Setting up your Bank Account º
+echo ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
+echo Create your Bank Number:
+set /p CharBankNum=
+echo Your Bank Account Number: %CharBankNum%
+set /a CharCash = 0
+set CharJob=None
+set /a CharJobPromotion = 0
+echo Successfully created your Bank Account!
+echo [Press any key to continue]
 pause > nul
+goto MainMenu
+
+:MainMenu
+cls
+echo ÉÍÍÍÍÍÍÍÍÍÍÍ»
+echo º Main Menu º
+echo ÈÍÍÍÍÍÍÍÍÍÍÍ¼
+echo Name: %CharName%
+echo Gender: %CharGender%
+echo Cash: %CharCash%
+echo Bank Account Number: %CharBankNum%
+echo Job: %CharJob% [Promotion: %CharJobPromotion%]
+echo [Press any key to continue]
+pause > nul
+cls
+echo ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»
+echo º What would you like to do? º
+echo ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
+if %CharJob% == None (
+	echo Get A Job? [Use: JOB]
+) else (
+	echo Go to work? [%CharJob% - Use: Work]
+)
+echo Exit? [Use: Exit]
+echo Wipe Data? [Use: WipePlayerData]
+echo [More Coming Soon]
+
+set /p ChoicePath=
+if %ChoicePath%==JOB (
+	goto GetAJob
+) else (
+	if %ChoicePath%==Exit (
+		cls
+		echo [Press any key to exit]
+		pause > nul
+		exit
+	) else (
+		if %ChoicePath% == WipePlayerData (
+			goto StartLoading
+		) else (
+			if %ChoicePath%==Work (
+				goto AttendWork
+			) else (
+				echo Not a valid path.
+				echo [Press any key to continue]
+				pause > nul
+				goto MainMenu
+			)
+		)
+	)
+)
+
+:GetAJob
+cls
+echo ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»
+echo º What would you like to work as? º
+echo ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
+echo Cashier [Use: C]
+echo Baker [Use: B]
+echo Janitor [Use: J]
+echo Taxi Driver [Use: T]
+
+set /p SelectedJob=
+if %SelectedJob%==C (
+	set CharJob=Cashier
+	echo [Press any key to continue]
+	pause > nul
+	goto MainMenu
+) else (
+	if %SelectedJob%==B (
+		set CharJob=Baker
+		echo [Press any key to continue]
+		pause > nul
+		goto MainMenu
+	) else (
+		if %SelectedJob%==J (
+			set CharJob=Janitor
+			echo [Press any key to continue]
+			pause > nul
+			goto MainMenu
+		) else (
+			if %SelectedJob%==T (
+				set CharJob = TaxiDriver
+				echo [Press any key to continue]
+				pause > nul
+				goto MainMenu
+			) else (
+				echo Invalid job option!
+				echo [Press any key to continue]
+				pause > nul
+				goto GetAJob
+			)
+		)
+	)
+)
+
+:AttendWork
+cls
+set EarnedCash=0
+set Gretting=Hello
+set Order1=%RANDOM% * (3 - 1 + 1) / 32768 + 1
+set Order2=%RANDOM% * (3 - 1 + 1) / 32768 + 1
+set Order3=%RANDOM% * (3 - 1 + 1) / 32768 + 1
+cls
+if %CharJob%==Cashier (
+	goto Cashier
+)
+pause > nul
+
+:Cashier
+echo ÉÍÍÍÍÍÍÍÍÍÍÍ»
+echo º Pizza Hut º
+echo ÈÍÍÍÍÍÍÍÍÍÍÍ¼
+echo Wait for a customer to order!
+timeout > nul /t 2
+cls
+echo ÉÍÍÍÍÍÍÍÍÍÍÍ»
+echo º Pizza Hut º
+echo ÈÍÍÍÍÍÍÍÍÍÍÍ¼
+echo Say hello to the customer! (Capital is required: Hello)
+
+set /p WrittenResponse=
+if %WrittenResponse%==Hello (
+	echo Good Job! You earned 15Dollars
+	set EarnedCash = %EarnedCash% + 15
+	cls
+	echo ÉÍÍÍÍÍÍÍÍÍÍÍ»
+	echo º Pizza Hut º
+	echo ÈÍÍÍÍÍÍÍÍÍÍÍ¼
+	echo I would like:
+	if %Order1%==1 (
+		set Order1_Complete=Burger
+	) else (
+		if %Order1%==2 (
+			set Order1_Complete=Fries
+		) else (
+			if %Order1%==3 (
+				set Order1_Complete=Drink
+			) else (
+				echo Game Error!
+				pause > nul
+			)
+		)
+	)
+	echo 1. %Order1_Complete%
+	pause > nul
+) else (
+	echo Incorrect! Try again next time...
+	cls
+	echo ÉÍÍÍÍÍÍÍÍÍÍÍ»
+	echo º Pizza Hut º
+	echo ÈÍÍÍÍÍÍÍÍÍÍÍ¼
+	echo I would like:
+	if %Order1%==1 (
+		set Order1_Complete=Burger
+	) else (
+		if %Order1%==2 (
+			set Order1_Complete=Fries
+		) else (
+			if %Order1%==3 (
+				set Order1_Complete=Drink
+			) else (
+				echo Game Error!
+				pause > nul
+			)
+		)
+	)
+	echo 1. %Order1_Complete%
+	pause > nul
+)
